@@ -1,0 +1,154 @@
+.wish_stock{
+	padding-top: 40px;
+}
+.subtotal{
+	padding-left: 10px;
+	color: black;
+	font-size: 20px;
+}
+.wishlist{
+	padding-right: 0px;
+}
+.wish_edit{
+	padding-right: 0px;
+}
+.wish_edit>ul{
+	margin-left: 49px;
+}
+.wraper_ship_order{
+	height: 200px;
+}
+.ship_order{
+	float: right;
+	width: 300px;
+}
+.ship_order1{
+	border-top: solid #f4f4f4 1px;
+	height: 50px;
+	vertical-align: middle;
+	padding-top: 10px;
+}
+.ship_order1_info{
+	float: right;
+	margin-right: 40px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+}
+.ship_order2_info{
+	float: right;
+	margin-right: 40px;
+	font-style: italic;
+}
+.ship_order3_info{
+	float: right;
+	margin-right: 40px;
+	font-size: 20px;
+	color: rgb(42,42,42);
+	font-weight: bold;
+	padding-top: -10px;
+}
+.ship_order1_title{
+	font-size: 15px;
+	color: #bfbfbf;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 20px;
+}
+.ship_order2_title{
+	font-size: 15px;
+	color: #bfbfbf;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 20px;
+}
+.ship_order3_title{
+	font-size: 15px;
+	color: #4a4a4a;
+	font-family: 'Oswald', sans-serif;
+	margin-left: 20px;
+	padding-top: 5px;
+}
+.ship_order>div:last-child{
+	background-color: #f4f4f4;
+	height: 50px;
+}
+.wraper_coupon{
+	padding-right: 0px;
+}
+.wishlist:last-child{
+	margin-bottom: 0px;
+}
+.coupon_input{
+	width: 80%;
+	height: 40px;
+	background-color: #f4f4f4;
+	border: none;
+	font-size: 15px;
+	color: #bfbfbf;
+	padding-left: 20px;
+}
+.coupon_button{
+	width: 110px;
+	height: 40px;
+	border: none;
+	background-color: #E04144;
+	color: white;
+}
+.ship_order {
+	float: none;
+	width: 100%;
+}
+.wraper_subtotal_info{
+	padding-right: 0px;
+	padding-bottom: 100px;
+}
+.wraper_ship_order{
+	padding-right: 0px;
+	padding-left: 0px;
+	height: auto;
+}
+.ship_order>.ship_order1:first-child{
+	border-top: none;
+}
+.ship_order1{
+	height: 70px;
+	padding-top: 20px;
+}
+.ship_order>div:last-child {
+	height: 70px;
+}
+.ship_order1>p{
+	font-size: 20px;
+}
+.wraper_coupon{
+	border-bottom: solid 2px #f4f4f4;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.wraper_coupon>div{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.shop_cart_button_order{
+	width: 49%;
+	margin-top: 20px;
+	height: 40px;
+	border: none;
+}
+.button_1{
+	border:solid 3px #f4f4f4;
+	background-color: transparent;
+	color: #bfbfbf;
+	font-family: 'Open Sans', sans-serif;
+}
+.button_2{
+	background-color: rgb(42,42,42);
+	color: white;
+	margin-left: 7px;
+	font-family: 'Open Sans', sans-serif;
+}
+.number_product_button {
+    height: 40px;
+    width: 40px;
+    color: black;
+    background-color: rgb(245,245,245);
+    border: none;
+}

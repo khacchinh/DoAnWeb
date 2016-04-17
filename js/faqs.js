@@ -1,0 +1,64 @@
+$(function(){
+	$(".plus").click(function(){
+		$(this).parent().next().toggle(700);
+	});
+})
+$(document).ready(function(){
+	$(".plus").click(function(){
+		$(this).children().toggleClass("glyphicon-minus glyphicon-plus");
+	});
+});
+$(document).ready(function(){
+  $(".wraper_shiping").hide();
+  $(".wraper_returne").hide();
+  $(".wraper_orther").hide();
+  $("#ordering_button").addClass("btn-active");
+});
+$(document).ready(function(){
+  $("#ordering_button").click(function(){
+    $(".wraper_shiping").hide();
+  	$(".wraper_return").hide();
+  	$(".wraper_orther").hide();
+    $(".wraper_ordering").show();
+    $(this).addClass("btn-active");
+    $("#shipping_button").removeClass("btn-active");
+    $("#return_button").removeClass("btn-active");
+    $("#orther_button").removeClass("btn-active");
+  })
+});
+$(document).ready(function(){
+  $("#shipping_button").click(function(){
+    $(".wraper_ordering").hide();
+  	$(".wraper_return").hide();
+  	$(".wraper_orther").hide();
+    $(".wraper_shiping").show();
+    $(this).addClass("btn-active");
+    $("#ordering_button").removeClass("btn-active");
+    $("#return_button").removeClass("btn-active");
+    $("#orther_button").removeClass("btn-active");
+  })
+});
+$(document).ready(function(){
+  $("#return_button").click(function(){
+    $(".wraper_ordering").hide();
+  	$(".wraper_shiping").hide();
+  	$(".wraper_orther").hide();
+    $(".wraper_return").show();
+    $(this).addClass("btn-active");
+    $("#ordering_button").removeClass("btn-active");
+    $("#shipping_button").removeClass("btn-active");
+    $("#orther_button").removeClass("btn-active");
+  })
+});
+$(document).ready(function(){
+  $("#orther_button").click(function(){
+    $(".wraper_ordering").hide();
+  	$(".wraper_shiping").hide();
+  	$(".wraper_return").hide();
+    $(".wraper_orther").show();
+    $(this).addClass("btn-active");
+    $("#ordering_button").removeClass("btn-active");
+    $("#shipping_button").removeClass("btn-active");
+    $("#return_button").removeClass("btn-active");
+  })
+});
