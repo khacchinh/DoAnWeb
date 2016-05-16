@@ -66,6 +66,6 @@
 				</div>
 			</div>
 			<button class="shop_cart_button_order button_1" type="button" onclick="window.open('<?php echo base_url().'Cart/previous'?>');">TIẾP TỤC MUA HÀNG</button>
-			<button class="shop_cart_button_order button_2" type="button">THANH TOÁN</button>
+			<button class="shop_cart_button_order button_2" type="button" onclick="window.open('<?php echo base_url().'Payment/index'?>');">THANH TOÁN</button>
 		</div>
 	</div>

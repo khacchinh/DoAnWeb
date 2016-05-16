@@ -58,7 +58,7 @@
 	        </li>
 	        <li><a href="<?php echo base_url(). 'blog';?>">BLOG</a></li>
 	        <li><a href="<?php echo base_url() . 'faqs'; ?>">HƯỚNG DẪN MUA HÀNG</a></li>
-	        <li><a href="#">LIÊN HỆ</a></li>
+	        <li><a href="<?php echo base_url() . 'contact'; ?>">LIÊN HỆ</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-left col-xs-12 col-sm-2 col-md-2 col-lg-4">
 	      	<div class="col-xs-12 col-sm-2 col-md-2 col-lg-12 cart">

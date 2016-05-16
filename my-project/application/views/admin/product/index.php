@@ -86,7 +86,7 @@
 													<div class="clear"></div>
 												</div>
 												<div class="col-xs-10">
-													<a target="_blank" title="" class="tipS" href="">
+													<a target="_blank" title="" class="tipS" href="<?php echo base_url().'Product/view/'.$row->id; ?>">
 													    <b><?php echo $row->name?></b>
 													</a>
 													

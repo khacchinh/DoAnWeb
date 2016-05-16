@@ -38,9 +38,9 @@
                     <ul class="nav child_menu">
                         <li><a>Đơn hàng<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Giao dịch</a>
+                            <li class="sub_menu"><a href="<?php echo admin_url('transaction'); ?> ">Đơn hàng</a>
                             </li>
-                            <li><a href="#level2_1">Đơn hàng sản phẩm</a>
+                            <li><a href="<?php echo admin_url('order'); ?>">Chi tiết đơn hàng</a>
                             </li>
                           </ul>
                         </li>

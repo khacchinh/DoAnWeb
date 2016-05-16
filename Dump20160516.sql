@@ -343,7 +343,7 @@ CREATE TABLE `order` (
   `data` text COLLATE utf8_bin NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -352,6 +352,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
+INSERT INTO `order` VALUES (41,48,24,1,347000.0000,'',0),(40,47,19,1,25000.0000,'',1),(40,46,18,1,30000.0000,'',1);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -480,7 +481,7 @@ CREATE TABLE `transaction` (
   `security` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -489,6 +490,7 @@ CREATE TABLE `transaction` (
 
 LOCK TABLES `transaction` WRITE;
 /*!40000 ALTER TABLE `transaction` DISABLE KEYS */;
+INSERT INTO `transaction` VALUES (40,0,1,20,'Khac Chinh','khacchinh@gmail.com','01653762420',55000.0000,'Thanh toán khi nhận hàng','','','',1463385329),(41,0,0,20,'Khac Chinh','khacchinh@gmail.com','01653762420',347000.0000,'Thanh toán khi nhận hàng','','','',1463385513);
 /*!40000 ALTER TABLE `transaction` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -561,4 +563,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-14 14:28:38
+-- Dump completed on 2016-05-16 18:14:47
