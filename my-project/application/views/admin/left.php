@@ -50,7 +50,13 @@
                             </li>
                             <li><a href="<?php echo admin_url('catalog')?>">Danh mục</a>
                             </li>
-                            <li><a href="#level2_2">Phản hồi</a>
+                            <li><a href="<?php echo base_url('Contact_Requird_Customer')?>">Phản hồi</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a>Bài viết<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="<?php echo admin_url('blog'); ?> ">Blogs</a>
                             </li>
                           </ul>
                         </li>

@@ -16,6 +16,8 @@
 			$this->load->model('Product_model');
 			$id = $this->input->post('id');
 
+			$this->Product_model->count_buyed($id);
+
 			$product = $this->Product_model->get_info($id);
 			if (!$product){
 			 	redirect();

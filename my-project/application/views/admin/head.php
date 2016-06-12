@@ -65,7 +65,7 @@
   <script type="text/javascript" src="<?php echo public_url("admin") ?>/vendors/nprogress/nprogress.js"></script>
   <script type="text/javascript" src="<?php echo public_url("admin") ?>/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
   <script type="text/javascript" src="<?php echo public_url("admin") ?>/vendors/dropzone/dist/min/dropzone.min.js"></script>
-
+  
    <!-- jQuery Smart Wizard -->
     <script>
       $(document).ready(function() {

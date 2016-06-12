@@ -51,8 +51,8 @@
 			                            <td class=" "><?php echo $row->address; ?> </td>
 			                            <td class=" "><?php echo $row->created; ?> </td>
 			                            <td class=" last">
-			                            	<a href="<?php echo admin_url('user/edit/'.$row->id); ?>">Sửa</a> 
-			                            	<a href="<?php echo admin_url('user/delete/'.$row->id); ?>">Xóa</a>
+			                            	<a class="btn btn-info btn-xs" href="<?php echo admin_url('user/edit/'.$row->id); ?>">Sửa</a> 
+			                            	<a class="btn btn-danger btn-xs" href="<?php echo admin_url('user/delete/'.$row->id); ?>">Xóa</a>
 			                            </td>
 			                          </tr>
 			                        <?php endforeach; ?>

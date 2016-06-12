@@ -7,7 +7,7 @@
 		                <div class="x_panel">
 		                  <div class="x_title">
 		                    <h2>Quản lý sản phẩm</h2>
-		                    <a class="btn btn-default" type="button" style="float: right;" href="<?php echo admin_url('catalog'); ?>">Danh sách</a>
+		                    <a class="btn btn-default" type="button" style="float: right;" href="<?php echo admin_url('product'); ?>">Danh sách</a>
 		                    <div class="clearfix"></div>
 		                  </div>
 
@@ -125,7 +125,16 @@
 			                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Nội dung
 			                        </label>
 				                        <div class="col-md-6 col-sm-6 col-xs-12">
-				                          <textarea class="form-control" rows="5" name="content" value="<?php echo $product->content; ?>"></textarea>
+				                          <textarea class="form-control" rows="5" name="content" id="content" value="<?php echo $product->content; ?>"><?php echo $product->content; ?></textarea>
+				                          <script src="<?php echo public_url("admin") ?>/js/ckeditor/ckeditor.js"></script>
+				                          <script>
+				                        	CKEDITOR.replace( 'content' );
+				                        	CKEDITOR.editorConfig = function( config ) {
+												// Define changes to default configuration here. For example:
+												config.language = 'fr';
+    											config.uiColor = '#AADC6E';
+											};
+				                          </script>
 				                        </div>
 			                        </div>
 			                        <div class="ln_solid"></div>

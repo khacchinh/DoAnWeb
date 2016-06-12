@@ -155,31 +155,20 @@
 					</div>
 				</div>
 				<div id="slide_blog" class="container owl-carousel">
+					<?php foreach ($blog as $row):?>
 					<div class="item">
 						<div class=" blog_img_slide col-xs-9 col-sm-9 col-md-9 col-lg-6">
-							<img class="slide_blog_img" src="<?php echo public_url()?>/img/blog/occho.jpg">
+							<img class="slide_blog_img" src="<?php echo base_url('upload/blog/'.$row->image_link)?>">
 						</div>
 						<div class="blog_content_slide col-xs-9 col-sm-9 col-md-9 col-lg-6">
-							<p><h4>QUẢ ÓC CHÓ MUA Ở ĐÂU UY TÍN? QUẢ ÓC CHÓ CÓ TÁC DỤNG GÌ?</h4></p>
-							<p class="text_time">Ngày 1 Tháng  4 Năm 2016</p>
+							<p><h4><?php echo $row->title ?></h4></p>
+							<p class="text_time">BY <?php echo $row->user_name ?> / <?php echo get_date($row->created, false); ?></p>
 							<br>
 							<br>
-							<p class="text_content">Quả óc chó là loại quả quý không phải ở đâu cũng trồng được nó phụ thuộc rất nhiều vào khí hậu và môi trường tự nhiên như đất đai màu mỡ, thảm thực vật tươi tốt. Hiện nay thì Mỹ là nước trồng quả óc chó đứng đầu thế giới cả về chất lượng [...]</p>
-							<a href="#"><button type="button" class="read_more">ĐỌC THÊM</button></a>
+							<p class="text_content"><?php echo $row->discription ?> [...]</p>
+							<a href="<?php echo base_url().'Blog/view/'.$row->id; ?>"><button type="button" class="read_more">ĐỌC THÊM</button></a>
 						</div>
 					</div>
-					<div class="item">
-						<div class=" blog_img_slide col-xs-9 col-sm-9 col-md-9 col-lg-6">
-							<img class="slide_blog_img" src="<?php echo public_url()?>/img/blog/matong.jpg">
-						</div>
-						<div class="blog_content_slide col-xs-9 col-sm-9 col-md-9 col-lg-6">
-							<p><h4>TÁC DỤNG CỦA MẬT ONG ĐỐI VỚI SỨC KHỎE</h4></p>
-							<p class="text_time">Ngày 1 Tháng  4 Năm 2016</p>
-							<br>
-							<br>
-							<p class="text_content">Lợi ích của mật ong đối với sức khỏe con người đã được thừa nhận ở nhiều nền văn hóa qua nhiều thế kỷ. Mật ong nguyên chất là một trong những thực phẩm mang tính chất của một vị thuốc dễ ăn nhất, và cung cấp nhiều dưỡng chất thiên nhiên cho cơ thể. […]</p>
-							<a href="#"><button type="button" class="read_more">ĐỌC THÊM</button></a>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>

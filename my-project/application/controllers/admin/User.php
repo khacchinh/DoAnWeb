@@ -22,10 +22,22 @@
 	 		$config = array();
 	 		$config['total_rows'] = $total_rows;//tong tat ca cac thành viên tren website
 	        $config['base_url']   = admin_url('user/index'); //link hien thi ra danh sach thành viên
-	        $config['per_page']   = 1;//so luong thành viên hien thi tren 1 trang
+	        $config['per_page']   = 8;//so luong thành viên hien thi tren 1 trang
 	        $config['uri_segment'] = 4;//phan doan hien thi ra so trang tren url
 	        $config['next_link']   = 'Trang kế tiếp';
 	        $config['prev_link']   = 'Trang trước';
+	        $config['prev_tag_open'] = '<li>';
+			$config['prev_tag_close'] = '</li>';
+			$config['next_tag_open'] = '<li>';
+			$config['next_tag_close'] = '</li>';
+			$config['first_tag_open'] = '<li>';
+			$config['first_tag_close'] = '</li>';
+			$config['last_tag_open'] = '<li>';
+			$config['last_tag_close'] = '</li>';
+			$config['cur_tag_open'] = '<li class="current"><a href="#">';
+			$config['cur_tag_close'] = '</a></li>';
+			$config['num_tag_open'] = '<li>';
+			$config['num_tag_close'] = '</li>';
 
 	        //khoi tao cac cau hinh phan trang
 	        $this->pagination->initialize($config);

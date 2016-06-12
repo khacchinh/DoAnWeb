@@ -41,6 +41,8 @@
 	 		$id = $this->uri->rsegment(3);
 	 		$id = intval($id);
 
+	 		$this->Product_model->count_buyed($index);
+
 	 		$product = $this->Product_model->get_info($id);
 	 		if (!$product){
 	 			redirect();

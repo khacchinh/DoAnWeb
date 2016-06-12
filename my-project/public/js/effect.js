@@ -1,11 +1,3 @@
- $('.rating-input').rating({
-              min: 0,
-              max: 5,
-              step: 1,
-              size: 'lg',
-              showClear: false,
-              showCaption:false
-});
  $(document).ready(function($) {
      $("#mini_slide").owlCarousel({
       slideSpeed : 200,
@@ -67,4 +59,12 @@ $(document).ready(function(){
     $(".value_number").text(value);
   }
   });
+});
+ $('.rating-input').rating({
+              min: 0,
+              max: 5,
+              step: 1,
+              size: 'lg',
+              showClear: false,
+              showCaption:false
 });

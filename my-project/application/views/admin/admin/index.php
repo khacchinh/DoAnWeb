@@ -46,8 +46,8 @@
 			                            <td class=" "><?php echo $row->name; ?> </td>
 			                            <td class=" "><?php echo $row->username; ?> </td>
 			                            <td class=" last">
-			                            	<a href="<?php echo admin_url('admin/edit/'.$row->id); ?>">Sửa</a> 
-			                            	<a href="<?php echo admin_url('admin/delete/'.$row->id); ?>">Xóa</a>
+			                            	<a class="btn btn-info btn-xs" href="<?php echo admin_url('admin/edit/'.$row->id); ?>">Sửa</a> 
+			                            	<a class="btn btn-danger btn-xs" href="<?php echo admin_url('admin/delete/'.$row->id); ?>">Xóa</a>
 			                            </td>
 			                          </tr>
 			                        <?php endforeach; ?>

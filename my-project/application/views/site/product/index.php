@@ -1,17 +1,11 @@
-<br>
 
 <div class="filter container">
-		<br>
-		<p>Danh sach san pham: <?php echo $catalog->name; ?></p>
-		<Br>
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 filter-title">Sắp xếp theo/
-			<select name="filter-loai" class="select filter-loai">
-				<option value="">Yêu thích</option>
-				<option value="">Giá từ cao đến thấp</option>
-				<option value="">Giá từ thấp đến cao</option>
-				<option value="">Hàng khuyến mại</option>
-			</select>
-		</div>
+			<?php 
+				if (isset($catalog) && $catalog)
+					echo "<h4 class='text-success'>Danh sách sản phẩm: <kbd>" . $catalog->name . "</kbd></h4>"; 
+				else if (isset($key_search) && $key_search)
+					echo "<h4 class='text-success'>Danh sách sản phẩm với từ khóa: <kbd>" . $key_search . "</kbd></h4>";;
+			?>
 	</div>
 	<br>
 	<!-- Content -->
@@ -30,19 +24,20 @@
 	</script>
 	<div class="container-fluid product_row">
 		<div class="container">
+			<?php if (count($product) == 0) echo "Not found. Please bạn hãy tìm với từ khóa khác. Lưu ý tiếng việt có dấu.!! Thank you <br><br>"?>
 			<?php foreach ($product as $key):?>
 			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product">
 				<div class="product_img">
-					<img class="img-responsive" src="<?php echo base_url('upload/product/'.$key->image_link) ?>">
+					<img class="img-responsive" src="<?php echo base_url('upload/product/'.$key["image_link"]) ?>">
 				</div>
 				<div class="product_info">
-					<p class="product_name"><?php echo $key->name; ?></p>
+					<p class="product_name"><?php echo $key["name"]; ?></p>
 				</div>
 				<div class="product_price">
-					<?php if ($key->discount > 0): ?>
-					<p class="price"> <small style="text-decoration: line-through; color: black;	"><?php echo $key->price;?></small> <strong><?php echo $key->price-$key->discount; ?></strong></p>
+					<?php if ($key["discount"] > 0): ?>
+					<p class="price"> <small style="text-decoration: line-through; color: black;	"><?php echo $key["price"];?></small> <strong><?php echo $key["price"]-$key["discount"]; ?></strong></p>
 					<?php else: ?>
-					<p class="price"><strong><?php echo $key->price; ?></strong></p>
+					<p class="price"><strong><?php echo $key["price"]; ?></strong></p>
 					<?php endif; ?>
 				</div>
 				<div class="rating">
@@ -52,22 +47,21 @@
 					<img class="img-responsive" width="23px" height="95px" src="img/label/moi.jpg">
 				</div>
 				<div class="hover_product">
-					<p class="text-center"><button type="button" class="hover_button" onclick = "buy_item('<?php echo $key->id ?>')">THÊM VÀO GIỎ</button></p>
-					<p class="text-center"><button type="button" class="hover_button" onclick="window.open('<?php echo base_url().'Product/view/'.$key->id; ?>', '_blank');">XEM</button></p>
+					<p class="text-center"><button type="button" class="hover_button" onclick = "buy_item('<?php echo $key["id"] ?>')">THÊM VÀO GIỎ</button></p>
+					<p class="text-center"><button type="button" class="hover_button" onclick="window.open('<?php echo base_url().'Product/view/'.$key["id"]; ?>', '_blank');">XEM</button></p>
 				</div>
 			</div>
 		<?php endforeach; ?>
 		</div>
 	</div>
-	<br>
-	<br>
 	<div class="container number-page">
 		<p class="text-center">
-	      <button class="btn btn-default" type="button">1</button>
-	      <button class="btn btn-danger" type="button">2</button>
-	      <button class="btn btn-default" type="button">3</button>
-	      <button class="btn btn-default" type="button">..</button>
-	      <button class="btn btn-default" type="button">120</button>
+	        <ul class="pagination">
+                <?php 
+                	if (isset($pagination) && $pagination)
+                		echo $pagination->create_links();
+                 ?>
+            </ul>
 	    </p>
     </div>
     <div class="container menu_control">
@@ -80,7 +74,10 @@
 		</div>
 	</div>
 	<div id="mini_slide" class="owl-carousel container">
-        <div class="item">
-          <a href="#"><img class="mini_slide_img img-responsive" src="img/product/cachua.jpg"></a>
-        </div>
-     </div>
+        <!-- code database here -->
+		<?php foreach ($list as $key):?>
+	        <div class="item">
+	          <a href="<?php echo base_url().'Product/view/'.$key->id; ?>"><img class="mini_slide_img img-responsive" src="<?php echo base_url('upload/product/'. $key->image_link)?>"></a>
+	        </div>
+	    <?php endforeach; ?>     
+	</div>

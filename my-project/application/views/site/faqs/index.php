@@ -2,96 +2,61 @@
 	<div id="main_faqs" class="container-fluid">
 		<div class="container wraper_main">
 			<div class="col-md-3 choose">
-				<button id="ordering_button" type="button" class="btn btn-default btn-200 btn-no-active"><p class="text-left">ORDERING</p></button>
-				<br>
-				<button id="shipping_button" type="button" class="btn btn-default btn-200 btn-no-active"><p class="text-left">SHIPPING</p></button>
-				<br>
-				<button id="return_button" type="button" class="btn btn-default btn-200 btn-no-active"><p class="text-left">RETURNS</p></button>
-				<br>
-				<button id="orther_button" type="button" class="btn btn-default btn-200 btn-no-active"><p class="text-left">OTHER</p></button>
+				<button id="ordering_button" type="button" class="btn btn-default btn-200 btn-no-active"><p class="text-left">FAQS</p></button>
 			</div>
 			<div class="col-md-8 wraper_ordering col-md-offset-1">
 				<div class="wraper_faqs">
 					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">HOW TO PLACE AN ORDER?</h3>
+						<h3  style="font-weight: bold;color:#484848;">Làm sao để đặt hàng?</h3>
 						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-minus"></span></button>
 					</div>
 					<div class="answer">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
+						<h4><strong>Cách 1</strong></h4>
+						<blockquote style="font-size: 14px;">
+						1. Điền thông tin đặt hàng vào mẫu đơn đặt hàng trên trang FRESH FRUIT và nhấn nút “xác nhận”. Hoặc thêm từng mặt hàng vào giỏ hàng, điền thông tin liên lạc và nhấn nút “xác nhận” giỏ hàng. <br>
+
+						2.Chọn phương thức thanh toán. <br>
+
+						3. FRESH FRUIT sẽ gọi lại cho khách hàng để xác nhận đơn hàng. <br>
+
+						4. Đơn hàng sẽ được giao tận tay khách hàng, khách hàng kiểm tra hàng và thanh toán. 
+						</blockquote>
+
+						<h4><strong>Cách 2</strong></h4>
+						<blockquote style="font-size: 14px;">
+						1. Nhắn tin đơn hàng vào hotline của FRESH FRUIT: 0938 816 678 – 0938 819 458 với nội dung tên hàng, số lượng, địa chỉ, số điện thoại, giờ giao hàng. <br>
+
+						2. Đơn hàng sẽ được giao tận tay khách hàng, khách hàng kiểm tra hàng và thanh toán.
+						</blockquote>
 					</div>
 				</div>
 				<div class="wraper_faqs">
 					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">PAYMENT OPTIONS</h3>
+						<h3  style="font-weight: bold;color:#484848;">Phương thức thanh toán</h3>
 						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
 					</div>
 					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
+						<h4><strong>Cách 1</strong></h4>
+						<blockquote style="font-size: 14px;">
+						 Thanh toán khi nhận hàng – áp dụng với đơn hàng nội thành Hồ Chí Minh. 
+						</blockquote>
+						<h4><strong>Cách 2</strong></h4>
+						<blockquote style="font-size: 14px;">
+					 	Chuyển khoản trước qua ngân hàng – áp dụng với đơn hàng ngoại thành Hồ Chí Minh, ở tỉnh.
+						Ngân hàng: Vietcombank chi nhánh Thủ Đức.
+						Tên tài khoản: Huỳnh Khắc Chinh.
+						Số tài khoản: 123456789
+						</blockquote>
 					</div>
 				</div>
 				<div class="wraper_faqs">
 					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">APPLYING A COUPON </h3>
+						<h3  style="font-weight: bold;color:#484848;">Phương thức giao hàng </h3>
 						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
 					</div>
 					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-			</div>
-			<div class="col-md-8 wraper_shiping col-md-offset-1">
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">HOW TO PLACE AN ORDER?</h3>
-						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-minus"></span></button>
-					</div>
-					<div class="answer">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">PAYMENT OPTIONS</h3>
-						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">CHECK YOUR ORDER STATUS</h3>
-						<button type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">CANCELING ORDER</h3>
-						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">GIFT CARD</h3>
-						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
-					</div>
-				</div>
-				<div class="wraper_faqs">
-					<div class="question">
-						<h3  style="font-weight: bold;color:#484848;">APPLYING A COUPON </h3>
-						<button  type="button" class="btn btn-default plus"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-					<div class="answer noshow">
-						Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
+						* Giao hàng trực tiếp bằng xe máy với các đơn hàng nội thành Hồ Chí Minh. <br>
+						* Gửi xe chuyển hàng hoặc xe khách với các đơn hàng ở tỉnh.
 					</div>
 				</div>
 			</div>

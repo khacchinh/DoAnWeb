@@ -8,9 +8,12 @@
 			parent::__construct();
 			$this->load->model('Product_model');
 			$this->load->model('User_model');
+			$this->load->model('Blog_model');
+			$this->load->model('Content_static_model');
 		}
 
 		function index(){
+			$this->Content_static_model->count_sum_view();
 			//limit san pham lay ra
 			$login = $this->session->userdata('email');
 			if ($login && isset($login)){
@@ -28,6 +31,8 @@
 			$this->data['slide'] = true;
 			$this->data['homes'] = $this->Product_model->get_list($input);
 			$this->data['list'] = $this->Product_model->get_list($input_list);
+			$in = array();
+	 		$this->data['blog'] = $this->Blog_model->get_list($in);
 			$this->load->view('site/layout', $this->data);
 		}
 	}

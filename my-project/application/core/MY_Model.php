@@ -120,7 +120,11 @@ class MY_Model extends CI_Model {
 		$rows = $this->db->query($sql);
 		return $rows->result_array();
 	}
-
+	function get_entries($sql)
+    {
+            $query = $this->db->query($sql);
+            return $query->result();
+    }
 	function query_del($sql){
 		$rows = $this->db->query($sql);
 	}

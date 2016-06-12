@@ -1,47 +1,27 @@
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#txt_comm').keypress(function(event){
-				if (event.keyCode == 13){
-					if ($('#name').val() != ""){
-					$.ajax({
-				        type: 'POST',
-				        url: '<?php echo base_url().'/Ajax/do_comment' ?>',
-				        data: {product_id:'<?php echo $info->id; ?>', content: $('#txt_comm').val(), name: $('#name').val() },
-				        success:function(response){
-				        	result=response.split('~');
-				        	if (result.length > 1){
-					        	var main = $("<div class='content_comment'></div>");
-					            var img = $("<img src='<?php echo public_url() ?>/img/avatar.png'></img>").text("Text.");
-					            var comm_contain = $("<div class='comment_contain'><div/>");
-					            var comm_name = $("<p class = 'comment_name'></>").text(result[0]);
-					            var comm_time = $("<p class = 'comment_time'></>").text(result[2]);
-					            var comm_content = $("<p class = 'comment_content'></>").text(result[1]);
-					            var comm_rating = $("<div class='rating'><div/>");
-					            var start1 = $("<span class='glyphicon glyphicon-star' ></span>");
-					            var start2 = $("<span class='glyphicon glyphicon-star' ></span>");
-					            var start3 = $("<span class='glyphicon glyphicon-star' ></span>");
-					            var start4 = $("<span class='glyphicon glyphicon-star' ></span>");
-					            var start5 = $("<span class='glyphicon glyphicon-star-empty' ></span>");
-					            comm_rating.append(start1, start2, start3, start4, start5);
-					            comm_contain.append(comm_name, comm_time, comm_content, comm_rating);
-					            main.append(img, comm_contain);
-					            $('#div_comment').append(main);
-					            $('#info_comment').text("<?php echo (intval(count($comment)) + 1) ?> REVIEW(S) FOR <?php echo $info->name; ?> /");
-				        	}
-				        	else $('#txt_comm').val('Co loi xay ra!!');
-				    	}
-					});
-					}
-					else alert("Bạn chưa nhập tên!");
-				}	
-			});
-		});
-	</script>
-
 	<div class="container" id="wraper_product_view">
 		<div class="col-md-6 product_view_img">
-			<img class="img-responsive" src="<?php echo base_url().'upload/product/'.$info->image_link;?>">
+			<div class="simpleLens-gallery-container" id="demo-1">
+		        <div class="simpleLens-container">
+		            <div class="simpleLens-big-image-container">
+		                <a class="simpleLens-lens-image" data-lens-image="<?php echo base_url('upload/product/'.$info->image_link) ?>">
+		                    <img width="520px;" height="338px;" src="<?php echo base_url('upload/product/'.$info->image_link) ?>" class="simpleLens-big-image">
+		                </a>
+		            </div>
+		        </div>
+
+		        <div class="simpleLens-thumbnails-container">
+		        <?php $image_list = json_decode($info->image_list);?>
+		        <?php foreach ($image_list as $img):?>
+		        	<a href="#" class="simpleLens-thumbnail-wrapper"
+		               data-lens-image="<?php echo base_url('upload/product/'.$img) ?>"
+		               data-big-image="<?php echo base_url('upload/product/'.$img) ?>">
+		                <img width="66px;" height="43px;" src="<?php echo base_url('upload/product/'.$img) ?>">
+		            </a>
+		        <?php endforeach; ?>
+		        </div>
+		    </div>
+
 		</div>
 		<div class="col-md-6 product_view_info">
 			<div class="wraper_product_info">
@@ -56,14 +36,15 @@
 				</div>
 			</div>
 			<div class="product_description">
-				<p>
-					<?php echo $info->content; ?>
-				</p>
+				<div class="product_view_more_info">
+					<p class="product_view_more_info_title">Loại:</p>
+					<p class="product_view_more_info_content"><?php echo $catalog->name; ?></p>
+				</div>
 			</div>
 			<div class="select_number_product">
 				<button class="number_product_button sub_button" type="button">-</button>
-				<button class="number_product_button value_number"type="button"> </button>
-				<button class="number_product_button add_button"type="button">+</button>
+				<button class="number_product_button value_number" type="button"> </button>
+				<button class="number_product_button add_button" type="button">+</button>
 				<button type="button" class="read_more view_cart" onclick="window.open('<?php echo base_url().'Cart/add/'.$info->id; ?>', '_blank');">THÊM VÀO GIỎ</button>
 			</div>
 			<div class="view_wishlist">
@@ -74,28 +55,15 @@
 	<div class="container-fluid product_view_more_wraper">
 		<div class="container">
 			<div class="col-md-3 product_view_more_button">
-				<button class="product_view_more detail_more_show btn btn-default" type="button"><p class="text-left">THÔNG TIN</p></button>
+				<button class="product_view_more detail_more_show btn btn-default" type="button"><p class="text-left">MÔ TẢ SẢN PHẨM</p></button>
 				<button class="product_view_more shiping_more_show btn btn-default" type="button"><p class="text-left">VẬN CHUYỂN VÀ TRẢ HÀNG</p></button>
 				<button class="product_view_more review_more_show btn btn-default" type="button"><p class="text-left">BÌNH LUẬN</p></button>
 			</div>
 			<div class="col-md-9 product_view_more_info_wraper">
 				<div class="detail_more">
-					<div class="product_view_more_info">
-						<p class="product_view_more_info_title">Loại:</p>
-						<p class="product_view_more_info_content"><?php echo $catalog->name; ?></p>
-					</div>
-					<div class="product_view_more_info">
-						<p class="product_view_more_info_title">Fabric:</p>
-						<p class="product_view_more_info_content"></p>
-					</div>
-					<div class="product_view_more_info">
-						<p class="product_view_more_info_title">Dimensions:</p>
-						<p class="product_view_more_info_content"></p>
-					</div>
-					<div class="product_view_more_info">
-						<p class="product_view_more_info_title">weight:</p>
-						<p class="product_view_more_info_content"></p>
-					</div>
+					<p>
+						<?php echo $info->content; ?>
+					</p>
 				</div>
 				<div class="shipping_more">
 					

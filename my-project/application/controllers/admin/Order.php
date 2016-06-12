@@ -26,6 +26,18 @@
 	        $config['uri_segment'] = 4;
 	        $config['next_link']   = 'Trang kế tiếp';
 	        $config['prev_link']   = 'Trang trước';
+	        $config['prev_tag_open'] = '<li>';
+			$config['prev_tag_close'] = '</li>';
+			$config['next_tag_open'] = '<li>';
+			$config['next_tag_close'] = '</li>';
+			$config['first_tag_open'] = '<li>';
+			$config['first_tag_close'] = '</li>';
+			$config['last_tag_open'] = '<li>';
+			$config['last_tag_close'] = '</li>';
+			$config['cur_tag_open'] = '<li class="current"><a href="#">';
+			$config['cur_tag_close'] = '</a></li>';
+			$config['num_tag_open'] = '<li>';
+			$config['num_tag_close'] = '</li>';
 
 	        $this->pagination->initialize($config);
 
@@ -119,7 +131,7 @@
 		    	$data = array('status' => 1);
 		    	$this->Order_model->update($id, $data);
 
-		    	$sql = "select SUM(status) as total, COUNT(*) as total_row FROM `order` GROUP by transaction_id";
+		    	$sql = "select SUM(status) as total, COUNT(*) as total_row FROM `order` where transaction_id = ". $info->transaction_id ." GROUP by transaction_id";
 		    	$sta_order = $this->Order_model->query($sql);
 		    	$check = intval($sta_order[0]['total']);
 		    	$total_row = intval($sta_order[0]['total_row']);

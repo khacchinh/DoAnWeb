@@ -24,14 +24,18 @@
 						<input type="password" name="re_password" class="form-control login_pass " required="required">
 					</div>
 				</div>	
-				<p>Thông tin thêm</p>
+				<p class="col-lg-offset-2"><strong>THÔNG TIN THÊM:</strong></p>
 				<div class="row">
-					<label for="">Số điện thoại</label>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+						<label for="">Số điện thoại</label>
 					<input type="text" name="phone"  class="form-control login_pass ">
+					</div>
 				</div>
 				<div class="row">
-					<label for="">Địa chỉ</label>
-					<input type="text" name="address" class="form-control login_pass ">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+						<label for="">Địa chỉ</label>
+						<input type="text" name="address" class="form-control login_pass ">
+					</div>
 				</div>
 				<?php $this->load->view('site/message', $this->data); ?>
 				<div class="row">

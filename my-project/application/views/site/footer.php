@@ -11,8 +11,8 @@
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 text_contact">
 						<h4>THANH TOÁN</h4>
 						<ul class="text_contact1">
-							<li><a class="text_contact1" href="#">Phương thức thanh toán</a></li>
-							<li><a class="text_contact1" href="#">Câu hỏi thường gặp</a></li>
+							<li><a class="text_contact1" href="<?php echo base_url().'/faqs'?>">Phương thức thanh toán</a></li>
+							<li><a class="text_contact1" href="<?php echo base_url().'/faqs'?>">Câu hỏi thường gặp</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 text_contact">

@@ -3,15 +3,15 @@
 		<div id="mini_header" class="container">
 			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
 				<select class="select" name="lang">
+					<option value="">VN</option>
 					<option value="">EN</option>
-					<option value="">FR</option>
 					<option value="">ES</option>
 					<option value="">DS</option>
 				</select>
 			</div>
 			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
 				<select class="select" name="country">
-					<option value="USD">$ US</option>
+					<option value="VND">VND</option>
 				</select>
 			</div> 
 			<div class="col-xs-5 col-lg-offset-5 col-sm-5 col-md-5 col-lg-5">
@@ -69,9 +69,9 @@
 				  </a>
 	        	</li>
 	      	</div>
-	        <form role="search" class="navbar-form navbar-right col-xs-12 col-sm-2 col-md-2 col-lg-12">
+	        <form role="search" class="navbar-form navbar-right col-xs-12 col-sm-2 col-md-2 col-lg-12" action="<?php echo base_url('Product/search'); ?>" method="get">
 	        <div class="form-group">
-	          <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" class="form-control search-input">
+	          <input type="text" name="product_name" placeholder="TÌM KIẾM SẢN PHẨM" class="form-control search-input">
 	        </div>
 	        <button class="btn btn-default glyphicon glyphicon-search sreach-btn" type="submit"></button>
 	      </form>
